@@ -1,3 +1,4 @@
+#! /usr/bin/env python
 # Author: Alex Fields (github.com/alexfields)
 
 import numpy as np
