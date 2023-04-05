@@ -2,7 +2,7 @@
 FROM mambaorg/micromamba
 
 # Copy files into docker image
-COPY --chown=$MAMBA_USER:$MAMBA_USER ../../* /tmp/orfrater/
+COPY --chown=$MAMBA_USER:$MAMBA_USER ./ /tmp/orfrater/
 
 # Run mamba for env.yaml
 RUN micromamba install -y -n base -f /tmp/orfrater/env.yaml && \
@@ -18,5 +18,5 @@ RUN pip install --no-cache-dir -r /tmp/orfrater/requirements.txt && \
     rm -Rf /root/.cache/pip
 
 # Set up 
-ENV PATH /tmp/orfrater:${PATH}
+ENV PATH /tmp/orfrater:/tmp/orfrater/multiisotonic:${PATH}
 

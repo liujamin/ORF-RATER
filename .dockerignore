@@ -8,3 +8,7 @@ LICENSE
 
 # ignore files used to set up docker
 Dockerfile
+.dockerignore
+
+# ignore unused files
+*.pyc
